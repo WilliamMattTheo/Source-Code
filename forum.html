@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Recipe Forum</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <a href="index.html" style="text-decoration: none; color: inherit;">
+        <h1>SustainAbites</h1>
+    </a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="recipes.html">Recipes</a>
+      <a href="forum.html">Forums</a>
+      <a href="about-us.html">About Us</a>
+    </nav>
+  </header>
+
+  <div class="section">
+  <h2>Our Recipes</h2>
+  <div class="recipes">
+    <div class="recipe" onclick="showFeedback('Chickpea & Spinach Curry', 'images/spinachickpcurry.jpg')">
+      <img src="images/spinachickpcurry.jpg" alt="Chickpea & Spinach Curry">
+      <p>Chickpea & Spinach Curry</p>
+    </div>
+    <div class="recipe" onclick="showFeedback('Roasted Sweet Potato & Quinoa Salad', 'images/spqsalad.jpg')">
+      <img src="images/spqsalad.jpg" alt="Roasted Sweet Potato & Quinoa Salad">
+      <p>Roasted Sweet Potato & Quinoa Salad</p>
+    </div>
+    <div class="recipe" onclick="showFeedback('Zucchini Noodle Stir Fry', 'images/zucchininoodle.jpg')">
+      <img src="images/zucchininoodle.jpg" alt="Zucchini Noodle Stir Fry">
+      <p>Zucchini Noodle Stir Fry</p>
+    </div>
+  </div>
+</div>
+
+<!-- Hidden Feedback Section -->
+<div id="feedbackSection" class="forum-container" style="display: none;">
+  <div class="recipe">
+    <img id="recipeImage" src="" alt="">
+    <p id="recipeTitle"></p>
+  </div>
+
+  <div class="rating">
+    <label for="rating">Rate this recipe:</label>
+    <select id="rating">
+      <option value="1">1 Star</option>
+      <option value="2">2 Stars</option>
+      <option value="3">3 Stars</option>
+      <option value="4">4 Stars</option>
+      <option value="5">5 Stars</option>
+    </select>
+    <button onclick="submitRating()">Submit Rating</button>
+    <p id="ratingMsg" style="margin-top: 10px;"></p>
+  </div>
+
+  <div class="comments">
+    <h3>Comments</h3>
+    <textarea id="commentInput" placeholder="Leave a comment..."></textarea>
+    <button onclick="submitComment()">Submit Comment</button>
+    <ul id="commentList"></ul>
+  </div>
+</div>
+
+
+  <div class="footer">
+    <p>SustainAbites &copy; 2025. All Rights Reserved.<br>
+      Contact us: contact@sustainabites.com | 777-456-1234<br>
+      For more info: info@sustainabites.com
+    </p>
+  </div>
+
+  <script src="forum.js"></script>
+</body>
+</html>
